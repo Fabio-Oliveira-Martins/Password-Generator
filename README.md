@@ -11,7 +11,7 @@ de HTML, CSS e JavaScript.
 
 ## O que é?
 
-<p>Password Generator é um gerador de senhas</p>
+Password Generator é um gerador de senhas aleatórias.
 
 ## Como utilizar?
 
