@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="src/styles/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="src/scripts/components/copied_alert.js"></script>
+    <script type="module" src="src/scripts/password_generator.js" defer></script>
+    <script type="module" src="src/scripts/app.js" defer></script>
+</head>
+<body>
+    <div class="grid">
+        <header>
+            <h1 class="site-title">Random Password Generator</h1>
+        </header>
+        <main>
+            <section class="password-generator__container">
+                <div class="password-generator">
+                    <p class="password-generator__instructions">
+                        Click on button that's write "Generate" to create a new password.
+                    </p>
+                    <div class="password-generator__display-wrapper">
+                        <input type="text" readonly placeholder="Create password" class="password-generator__display">
+                        <button class="password-generator__copy">
+                            <img src="src/assets/icons/copy_icon.svg" alt="Illustrative image" class="password-generator__copy-icon">
+                        </button>
+                    </div>
+                    <button class="password-generator__generate-password">
+                        Generate
+                    </button>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p class="attribution">Fábio O. Martins &copy; 2026</p>
+        </footer>
+    </div>
+</body>
+</html>

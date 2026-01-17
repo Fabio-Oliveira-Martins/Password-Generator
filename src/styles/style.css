@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --body-bg-color: hsl(0, 0%, 100%); 
+    --bg-color: hsl(350, 83%, 86%);
+
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+
+    --title-color: hsl(0, 0%, 0%);
+    --text-color: hsl(0, 0%, 0%);
+    --input-color: hsl(0, 0%, 0%);
+    --button-color: hsl(0, 0%, 100%);
+
+    --title-font: "Mulish";
+    --text-font: "Space Mono";
+    --input-font: "Mulish";
+    --button-font: "Mulish";
+    --attribution-font: "Mulish";
+}
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+body, .grid {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+}
+
+.grid {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+header {
+    padding: 3rem 0;
+}
+
+.site-title {
+    text-align: center;
+    font-family: var(--title-font);
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--title-color);
+}
+
+main {
+    padding: 0 .7rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.password-generator__container {
+    max-width: 40rem;
+    min-width: 10rem;
+    height: auto;
+    position: relative;
+}
+
+.password-generator {
+    width: 100%;
+    padding: 2rem 1.4rem;
+    border-radius: .4rem;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    background-color: var(--bg-color);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.password-generator__instructions {
+    font-family: var(--text-font);
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+.password-generator__display-wrapper {
+    width: 100%;
+    display: flex;
+    border: solid 2px black;
+    border-radius: .65rem;
+}
+
+.password-generator__display {
+    flex: 1rem;
+    padding: .9rem 1.5rem;
+    border-radius: .5rem 0 0 .5rem;
+    background: none;
+
+    font-family: var(--input-font);
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+
+    color: var(--input-color);
+}
+
+.password-generator__display::placeholder {
+    color: rgba(0, 0, 0, 0.8);
+    letter-spacing: 0px;
+}
+
+.password-generator__copy {
+    width: 3rem;
+    border-radius: 0 .5rem .5rem 0;
+    background: none;
+    /* background-color: var(--white); */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    transition: background .2s ease-in-out;
+}
+
+.password-generator__copy:hover >
+.password-generator__copy-icon {
+    opacity: 1;
+}
+
+.password-generator__copy:hover {
+    opacity: .8;
+}
+
+.password-generator__copy-icon {
+    --wh: 60%;
+    
+    width: var(--wh);
+    height: var(--wh);
+
+    pointer-events: none;
+    opacity: .5;
+}
+
+.password-generator__generate-password {
+    width: 8rem;
+    padding: .5rem 0;
+    border-radius: .4rem;
+    background-color: var(--black);
+
+    font-family: var(--button-font);
+    font-weight: normal;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: var(--button-color);
+
+    cursor: pointer;
+}
+
+.password-generator__generate-password:active {
+    opacity: .9;
+}
+
+.pop-up__font {
+    font-family: var(--text-font);
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.custom-toast .swal2-timer-progress-bar-container {
+    direction: rtl;
+}
+
+.custom-toast .swal2-timer-progress-bar {
+    height: 4px;
+    background: linear-gradient(90deg,
+            #75a3ff,
+            #38bdf8);
+    border-radius: 999px;
+}
+
+footer {
+    padding: 3rem 0;
+}
+
+.attribution {
+    text-align: center;
+    font-family: var(--attribution-font);
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
